@@ -289,4 +289,15 @@ void arrays_swap(arrays_t *restrict a1, arrays_t *restrict a2)
   *a2 = tmp;
 }
 
+/**
+ * @brief Reset number of elements to smaller number.
+ *
+ * Reset number of elements to smaller number. If <tt>nmem</tt> is larger than or
+ * equal to the current number of elements, nothing is done. If the array object is
+ * <tt>NULL</tt>, then nothing is done.
+ *
+ * @param[in] nmem Reset <tt>a->nmem</tt> to <tt>nmem</tt>.
+ */
+extern void arrays_reindex(arrays_t a, size_t nmem);
+
 # endif

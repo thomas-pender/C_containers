@@ -128,3 +128,9 @@ int arrays_equal(arrays_t a1, arrays_t a2)
 
   return 1;
 }
+
+void arrays_reindex(arrays_t a, size_t nmem)
+{
+  if ( a == NULL || nmem >= a->nmem ) return;
+  a->nmem = nmem;
+}
